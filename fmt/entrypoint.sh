@@ -1,5 +1,8 @@
 #!/bin/sh
 set -e
+
+echo "$GCLOUD_AUTH" | base64 --decode > "$HOME"/gcloud.json
+
 cd "${TF_ACTION_WORKING_DIR:-.}"
 
 set +e
